@@ -66,11 +66,12 @@ def encode_strand(strand):
     encoding = []
     count = 1
 
-    for index in range(1, len(strand)):
-        if strand[index - 1] == strand[index]:
+    for index in range(1, len(strand) + 1):
+        if index < len(strand) and strand[index - 1] == strand[index]:
             count += 1
+
         else:
-            new_entry = strand[index - 1] + count
+            new_entry = strand[index - 1] + str(count)
             encoding.append(new_entry)
             count = 1
 
