@@ -48,8 +48,7 @@ def categorize_strand(strand):
     is_t_present = False
     is_u_present = False
 
-    for index in range(0, len(strand) - 1, 4):
-        base = strand[index]
+    for base in strand:
         if base == "T":
             is_t_present = True
 
